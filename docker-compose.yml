@@ -20,7 +20,7 @@ services:
       context: .
     volumes:
       - type: volume
-        source: vol_b
+        source: volb
         target: /tmp/App42PaaS
 
   prod:
@@ -34,9 +34,9 @@ services:
       - "8081:8080"
    volumes:
      - type: volume
-       source: vol_b
+       source: volb
        target: /tmp
 
 volumes:
   db:
-  vol_b:
+  volb:
