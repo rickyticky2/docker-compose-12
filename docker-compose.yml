@@ -19,9 +19,24 @@ services:
       dockerfile: Dockerfile_build
       context: .
     volumes:
-          - data:/tmp/App42PaaS
+          - vol_b:/tmp/App42PaaS
+
+
+  prod:
+   depends_on:  
+     - database
+     - building
+   build:
+     dockerfile: Dockerfile_build
+     context: .
+   ports:
+      - '8081:8080'
+   volumes:
+      - vol_b:/build  
+
+
 
 
 volumes:
   db:
-  data:
+  vol_b:
