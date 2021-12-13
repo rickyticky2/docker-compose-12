@@ -1,4 +1,4 @@
-FROM tomcat:alpine
+FROM tomcat
 WORKDIR /usr/local/tomcat/
 RUN mkdir /webapps/ROOT
 EXPOSE 8080
