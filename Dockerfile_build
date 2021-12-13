@@ -3,4 +3,5 @@ RUN apk update
 RUN apk add openjdk8
 RUN apk add maven -l
 WORKDIR /tmp/App42PaaS
+ADD . /tmp/App42PaaS
 RUN mvn package
