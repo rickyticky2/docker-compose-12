@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+
+  database:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345678
+      MYSQL_USER: user
+      MYSQL_PASSWORD: 123456
+      MYSQL_DATABASE: base
+    volumes:
+      - db:/var/lib/mysql
+
+  building:
+    depends_on:
+      - db
+    build:
+      dockerfile: Dockerfile_build
+      context: .
+    volumes:
+          - data-volume:/tmp/App42PaaS
