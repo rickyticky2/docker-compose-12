@@ -14,10 +14,9 @@ services:
 
   building:
     depends_on:
-      - db
+      - database
     build:
       dockerfile: Dockerfile_build
       context: .
     volumes:
           - data-volume:/tmp/App42PaaS
-          
