@@ -10,7 +10,9 @@ services:
       MYSQL_PASSWORD: 123456
       MYSQL_DATABASE: base
     volumes:
-      - db:/var/lib/mysql
+      - type: volume
+        source: db 
+        target: /var/lib/mysql
 
   building:
     depends_on:
