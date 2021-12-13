@@ -23,7 +23,6 @@ services:
         source: vol_b
         target: /tmp/App42PaaS
 
-
   prod:
    depends_on:  
      - database
@@ -37,9 +36,6 @@ services:
      - type: volume
        source: vol_b
        target: /tmp
-
-
-
 
 volumes:
   db:
