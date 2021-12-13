@@ -28,8 +28,8 @@ services:
      - database
      - building
    build:
-     dockerfile: Dockerfile_prod
      context: .
+     dockerfile: Dockerfile_prod    
    ports:
       - "8081:8080"
    volumes:
