@@ -1,8 +1,5 @@
 version: '3.7'
 
-networks:
-  app:
-
 services:
 
   database:
@@ -30,7 +27,7 @@ services:
      - database
      - building
    build:
-     dockerfile: Dockerfile_build
+     dockerfile: Dockerfile_prod
      context: .
    ports:
       - 8081:8080
