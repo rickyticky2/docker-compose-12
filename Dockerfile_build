@@ -5,4 +5,4 @@ RUN apk add maven -l
 WORKDIR /root/App42PaaS
 ADD . /root/App42PaaS
 RUN mvn package
-RUN mkdir data && cp target/*.war data && mkdir webapps/ROOT && cp Config.properties data/ROOT
+RUN mkdir data && cp target/*.war data && mkdir data/ROOT && cp Config.properties data/ROOT
