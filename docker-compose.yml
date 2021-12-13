@@ -27,8 +27,7 @@ services:
    depends_on:  
      - database
      - building
-   build:
-     dockerfile: Dockerfile_prod
+   build: pr
    ports:
       - "8081:8080"
    volumes:
