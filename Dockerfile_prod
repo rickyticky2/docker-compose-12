@@ -1,8 +1,6 @@
 FROM tomcat
 WORKDIR /usr/local/tomcat/
 RUN mkdir /usr/local/tomcat/webapps/ROOT
-RUN mkdir /usr/local/tomcat/data
 EXPOSE 8080
-RUN cd /usr/local/tomcat/data && ls -la
-RUN cp /usr/local/tomcat/data/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war webapps/ && cp /usr/local/tomcat/data/Config.properties webapps/ROOT/ 
+RUN cd /usr/local/tomcat/webapps && ls -la
 CMD ["catalina.sh", "run"]
