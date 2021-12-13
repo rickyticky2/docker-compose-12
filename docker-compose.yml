@@ -35,7 +35,7 @@ services:
    volumes:
      - type: volume
        source: vol1
-       target: /usr/local/tomcat/target/
+       target: /usr/local/tomcat/webapps/
 
 volumes:
   db:
