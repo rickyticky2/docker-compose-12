@@ -21,7 +21,7 @@ services:
     volumes:
       - type: volume
         source: vol_b
-        target: /tmp/App42PaaS
+        target: /tmp/App42PaaS/
 
   prod:
    depends_on:  
@@ -35,7 +35,7 @@ services:
    volumes:
      - type: volume
        source: vol_b
-       target: /tmp
+       target: /tmp/
 
 volumes:
   db:
