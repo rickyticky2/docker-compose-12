@@ -21,7 +21,7 @@ services:
     volumes:
       - type: volume
         source: volb
-        target: /tmp/App42PaaS
+        target: /root/App42PaaS
 
   prod:
    depends_on:  
