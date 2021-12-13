@@ -1,5 +1,4 @@
 FROM tomcat
-EXPOSE 8080
 WORKDIR  /usr/local/tomcat/
 RUN mkdir /webapps/ROOT
 RUN cp  /build/*.war webapps/ && cp /build/Config.properties  webapps/ROOT/ 
