@@ -20,3 +20,4 @@ services:
       context: .
     volumes:
           - data-volume:/tmp/App42PaaS
+          
