@@ -9,6 +9,8 @@ services:
       MYSQL_USER: user
       MYSQL_PASSWORD: 123456
       MYSQL_DATABASE: base
+    ports:
+      - "3300:3306"
     volumes:
       - type: volume
         source: db 
