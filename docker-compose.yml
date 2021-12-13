@@ -32,7 +32,7 @@ services:
    ports:
       - 8081:8080
    volumes:
-      - vol_b:/build  
+          - vol_b:/build  
 
 
 
