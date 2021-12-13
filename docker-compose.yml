@@ -20,8 +20,8 @@ services:
       context: .
     volumes:
       - type: volume
-        source: volb
-        target: /root/App42PaaS
+        source: vol1
+        target: /root/App42PaaS/data
 
   prod:
    depends_on:  
@@ -34,9 +34,9 @@ services:
       - "8081:8080"
    volumes:
      - type: volume
-       source: volb
-       target: /tmp
+       source: vol1
+       target: /root/data
 
 volumes:
   db:
-  volb:
+  vol1:
