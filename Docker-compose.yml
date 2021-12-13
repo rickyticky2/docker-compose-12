@@ -19,4 +19,9 @@ services:
       dockerfile: Dockerfile_build
       context: .
     volumes:
-          - data-volume:/tmp/App42PaaS
+          - data:/tmp/App42PaaS
+
+
+volumes:
+  db:
+  data:
