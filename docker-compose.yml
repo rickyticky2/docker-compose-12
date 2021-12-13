@@ -35,7 +35,7 @@ services:
    volumes:
      - type: volume
        source: vol1
-       target: /root/data
+       target: /data
 
 volumes:
   db:
