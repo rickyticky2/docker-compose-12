@@ -15,8 +15,6 @@ services:
         target: /var/lib/mysql
 
   building:
-    depends_on:
-      - database
     build:
       dockerfile: Dockerfile_build
       context: .
