@@ -19,7 +19,9 @@ services:
       dockerfile: Dockerfile_build
       context: .
     volumes:
-          - vol_b:/tmp/App42PaaS
+      - type: volume
+        source: vol_b
+        target: /tmp/App42PaaS
 
 
   prod:
@@ -30,9 +32,11 @@ services:
      dockerfile: Dockerfile_prod
      context: .
    ports:
-      - 8081:8080
+      - "8081:8080"
    volumes:
-          - vol_b:/build  
+     - type: volume
+       source: vol_b
+       target: /tmp
 
 
 
