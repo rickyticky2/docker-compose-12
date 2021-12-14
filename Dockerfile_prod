@@ -1,6 +1,8 @@
 FROM tomcat:6.0.53
 WORKDIR /usr/local/tomcat/
 EXPOSE 8080
-RUN cd /usr/local/tomcat/webapps && ls -la
-CMD  cp *.properties ROOT/ && cp *.properties webapps/ROOT/ && catalina.sh run
+RUN /usr/local/tomcat/webapps && ls -la
+RUN  cp *.properties ROOT/ && cp *.properties webapps/ROOT/
+CMD ["catalina.sh", "run"]
+
 
