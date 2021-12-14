@@ -1,4 +1,4 @@
-FROM tomcat
+FROM tomcat:6.0.53
 WORKDIR /usr/local/tomcat/
 EXPOSE 8080
 RUN cd /usr/local/tomcat/webapps && ls -la
